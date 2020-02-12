@@ -3,14 +3,15 @@ using namespace std;
 
 int main()
 {
-    setlocale(LC_ALL, "Russian");
-    float a, b, c, d, znam, num;
-    cout<<"Введите первую дробь: ";
-    cin>>a>>dummychar>>b;
-    cout<<"Введите вторую дробь: ";
-    cin>>c>>dummychar>>d;
-    znam=(a*d+c*b);
-    num=b*d;
-    cout<<"Сумма равна: "<<znam<<"/"<<num;
-    return 0;
+	setlocale(LC_ALL, "Russian");
+	int a, b, c, d, ch, zn;
+	char l;
+	cout << "Введите первую дробь: ";
+	cin >> a >> l >> b;
+	cout << "Введите вторую дробь: ";
+	cin >> c >> l >> d;
+	ch = (a*d) + (b* c);
+	zn = b * d;
+	cout << "\n\nСумма равна " << ch << "/" << zn;
+	return 0;
 }
