@@ -1,0 +1,17 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{
+	setlocale(LC_ALL, "Russian");
+	int a, b, c;
+	cout << "Введите количество фунтов: ";
+	cin >> a;
+	cout << "Введите количество шиллингов: ";
+	cin >> b;
+	cout << "Введите количество пенсов: ";
+	cin >> c;
+	c = round((12 * b + c) / 2.4);
+	cout << a << '.' << c;
+	return 0;
+}
