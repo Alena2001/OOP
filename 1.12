@@ -1,0 +1,20 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+	setlocale(LC_ALL, "Russian");
+	float decpounds, pounds, shilling, pens, p, t, d;
+	cout << "Введите число десятичных фунтов: ";
+	cin >> decpounds;
+	p = decpounds * 240;
+	pounds = static_cast<int>(decpounds);
+	d = pounds*240;
+	t = p - d;
+	t = static_cast<int>(t);
+	shilling = t / 12;
+	shilling = static_cast<int>(shilling);
+	d = shilling * 12;
+	pens = t - d;
+	cout << "Эквивалентная сумма в старой форме записи: " << pounds << "." << shilling << "." << pens;
+	return 0;
+}
