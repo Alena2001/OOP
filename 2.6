@@ -1,0 +1,16 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+	int numb, fact=1;
+	cin >> numb;
+	while (numb != 0)
+	{
+		for (int j = numb; j > 0; j--)
+			fact *= j;
+		cout << "Factorial is " << fact << endl;
+		fact = 1;
+		cin >> numb;
+	}
+	return 0;
+}
