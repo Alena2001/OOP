@@ -1,0 +1,18 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+	setlocale(LC_ALL, "Russian");
+	int guests, var=1, seat;
+	cout << "Введите число гостей: ";
+	cin >> guests;
+	cout << "Введите число мест: ";
+	cin >> seat;
+	for (int i = 1; i<=seat; i++)
+	{
+		var *= guests;
+		guests--;
+	}
+	cout << var;
+	return 0;
+}
