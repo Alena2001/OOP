@@ -1,0 +1,31 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{
+	setlocale(LC_ALL, "Russian");
+	int a, b, c, a1, b1, c1, funt=0, shi=0, pen=0;
+	char ch, oper, oper1, oper2, oper3;
+	do {
+		cout << "Введите первую сумму: ";
+		cin >> a>>oper>>b>>oper1>>c;
+		cout << "Введите вторую сумму: ";
+		cin >> a1 >> oper2 >> b1 >> oper3 >> c1;
+		pen = c + c1;
+		if (pen >= 12)
+		{
+			pen -= 12;
+			shi++;
+		}
+		shi = shi + b + b1;
+		if (shi >= 19)
+		{
+			shi -= 19;
+			funt++;
+		}
+		funt = funt + a + a1;
+		cout << "Всего: "<<funt<<'.'<<shi<<'.'<<pen<<endl<<"Продолжить?(+/-) ";
+		cin >> ch;
+	} while (ch != '-');
+	return 0;
+}
