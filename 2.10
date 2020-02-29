@@ -1,0 +1,17 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+	setlocale(LC_ALL, "Russian");
+	float cont, percent, year, res;
+	cout << "Введите начальный вклад: ";
+	cin >> cont;
+	cout << "Сумма: ";
+	cin >> res;
+	cout << "Введите процентную вставку: ";
+	cin >> percent;
+	percent /= 100;
+	while()
+	cout << "Через " << year << " лет вы получите " << cont;
+	return 0;
+}
