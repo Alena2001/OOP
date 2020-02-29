@@ -1,0 +1,32 @@
+#include <iostream>"
+using namespace std;
+int main()
+{
+	setlocale(LC_ALL, "Russian");
+	int a, b, c, d;
+	char oper, oper1, oper2, ch;
+	do {
+		cout << "Введите рифметическое действие: ";
+		cin >> a >> oper1 >> b >> oper >> c >> oper2 >> d;
+		switch (oper)
+		{
+		case '+':
+			cout << a * d + b * c << "/" << b * d <<endl<< "Продолжить?(+/-) ";
+			cin >> ch;
+			break;
+		case '-':
+			cout << a * d - b * c << "/" << b * d <<endl<< "Продолжить?(+/-) ";
+			cin >> ch;
+			break;
+		case '*':
+			cout << a * c << "/" << b * d <<endl<< "Продолжить?(+/-) ";
+			cin >> ch;
+			break;
+		case '/':
+			cout << a * d << "/" << b * c <<endl<< "Продолжить?(+/-)";
+			cin >> ch;
+			break;
+		}
+	} while (ch != '-');
+	return 0;
+}
