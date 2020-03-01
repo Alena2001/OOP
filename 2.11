@@ -1,0 +1,86 @@
+#include <iostream>
+#include <math.h>
+using namespace std;
+
+int main()
+{
+	setlocale(LC_ALL, "Russian");
+	int a, b, c, a1, b1, c1, funt = 0, shi = 0, pen = 0, ve;
+	char ch, oper, oper1, oper2, oper3, ar;
+	do {
+		cout << "Введите первую сумму: ";
+		cin >> a >> oper >> b >> oper1 >> c;
+		cout << "Введите арифметическое действие: ";
+		cin >> ar;
+		if (ar == '*')
+		{
+			cout << "Введите вещественное число: ";
+			cin >> ve;
+		}
+		else
+		{
+			cout << "Введите вторую сумму: ";
+			cin >> a1 >> oper2 >> b1 >> oper3 >> c1;
+		}
+		switch (ar)
+		{
+		case '+':
+			pen = 0;
+			shi = 0;
+			funt = 0;
+			pen = c + c1;
+			if (pen >= 12)
+			{
+				pen -= 12;
+				shi++;
+			}
+			shi = shi + b + b1;
+			if (shi >= 19)
+			{
+				shi -= 19;
+				funt++;
+			}
+			funt = funt + a + a1;
+			cout << "Всего: " << funt << '.' << shi << '.' << pen << endl << "Продолжить?(+/-) ";
+			cin >> ch;
+			break;
+		case '-':
+			if (c < c1)
+			{
+				pen = 12 + c - c1;
+				b--;
+			}
+			else
+				pen = c - c1;
+			if (b < b1)
+			{
+				shi = 19 + b - b1;
+				a--;
+			}
+			else
+				shi = b - b1;
+			funt = abs(a - a1);
+			cout << "Всего: " << funt << '.' << shi << '.' << pen << endl << "Продолжить?(+/-) ";
+			cin >> ch;
+			break;
+		case '*':
+			pen = c * ve;
+			if (pen > 11)
+			{
+				pen -= 12;
+				b++;
+			}
+			shi = b * ve;
+			if (shi > 18)
+			{
+				shi -= 19;
+				a++;
+			}
+			funt = a * ve;
+			cout << "Всего: " << funt << '.' << shi << '.' << pen << endl << "Продолжить?(+/-) ";
+			cin >> ch;
+			break;
+		}
+	} while (ch != '-');
+	return 0;
+}
