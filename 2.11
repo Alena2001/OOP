@@ -64,19 +64,22 @@ int main()
 			cin >> ch;
 			break;
 		case '*':
+			pen = 0;
+			shi = 0;
+			funt = 0;
 			pen = c * ve;
 			if (pen > 11)
 			{
 				pen -= 12;
-				b++;
+				shi++;
 			}
-			shi = b * ve;
+			shi = b * ve + shi;
 			if (shi > 18)
 			{
 				shi -= 19;
-				a++;
+				funt++;
 			}
-			funt = a * ve;
+			funt = a * ve + funt;
 			cout << "Всего: " << funt << '.' << shi << '.' << pen << endl << "Продолжить?(+/-) ";
 			cin >> ch;
 			break;
