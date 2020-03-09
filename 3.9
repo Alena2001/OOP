@@ -1,0 +1,19 @@
+#include <iostream>
+using namespace std;
+struct time {
+	int hours;
+	int minutes;
+	int seconds;
+};
+int main()
+{
+	setlocale(LC_ALL, "Russian");
+	time t;
+	char b;
+	int t1;
+	cout << "Введите время: ";
+	cin >> t.hours >> b >> t.minutes >> b >> t.seconds;
+	long totalsecs = t.hours * 3600 + t.minutes * 60 + t.seconds;
+	cout << totalsecs;
+	return 0;
+}
