@@ -1,0 +1,28 @@
+#include <iostream>
+#include <iomanip>
+using namespace std;
+struct sterling {
+	int pounds;
+	int shilling;
+	int pence;
+};
+int main()
+{
+	setlocale(LC_ALL, "Russian");
+	sterling f;
+	double decpounds, p, t, x;
+	int d;
+	cout << "Введите число десятичных фунтов: ";
+	cin >> decpounds;
+	p = decpounds * 240;
+	f.pounds = static_cast<int>(decpounds);
+	d = f.pounds * 240;
+	t = p - d;
+	t = static_cast<int>(t);
+	x = t / 12;
+	f.shilling = static_cast<int>(x);
+	d = f.shilling * 12;
+	f.pence = static_cast<int>(t) - d;
+	cout << "Эквивалентная сумма в старой форме записи: " << f.pounds << "." << f.shilling << "." << f.pence;
+	return 0;
+}
