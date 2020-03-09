@@ -1,0 +1,116 @@
+#include <iostream>
+using namespace std;
+enum etype { laborer, secretary, manager, accountant, executive, researcher};
+struct date {
+	int day;
+	int month;
+	int year;
+};
+struct employee {
+	int numb;
+	float dol;
+	etype prof;
+	date dat;
+};
+int main()
+{
+	setlocale(LC_ALL, "Russian");
+	employee a, b, c;
+	char x, y, z, ch;
+	cout << "Введите номер первого сотрудника: ";
+	cin >> a.numb;
+	cout << "Введите размер пособия первого сотрудника: ";
+	cin >> a.dol;
+	cout << "Введите первую букву должности первого сотрудника: ";
+	cin >> x;
+	cout << "Введите дату принятия на работу первого сотрудника: ";
+	cin >> a.dat.day >>ch>> a.dat.month >>ch>> a.dat.year;
+	switch (x)
+	{
+	case 'l': a.prof = laborer; break; 
+	case 's': a.prof = secretary; break; 
+	case 'm': a.prof = manager; break; 
+	case 'a': a.prof = accountant; break; 
+	case 'e': a.prof = executive; break; 
+	case 'r': a.prof = researcher; break; 
+	}
+	cout << "База данных первого сотрудника: \n";
+	cout << "Номер: " << a.numb<<endl;
+	cout << "Пособие: " << a.dol << endl;
+	cout << "Должность: ";
+	switch (a.prof)
+	{
+	case laborer: cout << "laborer" << endl; break;
+	case secretary: cout << "secretary" << endl; break;
+	case manager: cout << "manager" << endl; break;
+	case accountant: cout << "accountant" << endl; break;
+	case executive: cout << "executive" << endl; break;
+	case researcher: cout << "researcher" << endl; break;
+	}
+	cout << "Дата приема на работу: " << a.dat.day << '/' << a.dat.month << '/' << a.dat.year<<endl;
+
+	cout << "Введите номер второго сотрудника: ";
+	cin >> b.numb;
+	cout << "Введите размер пособия второго сотрудника: ";
+	cin >> b.dol;
+	cout << "Введите первую букву должности второго сотрудника: ";
+	cin >> y;
+	cout << "Введите дату принятия на работу второго сотрудника: ";
+	cin >> b.dat.day >>ch>> b.dat.month >>ch>> b.dat.year;
+	switch (y)
+	{
+	case 'l': b.prof = laborer; break;
+	case 's': b.prof = secretary; break;
+	case 'm': b.prof = manager; break;
+	case 'a': b.prof = accountant; break;
+	case 'e': b.prof = executive; break;
+	case 'r': b.prof = researcher; break;
+	}
+	cout << "База данных второго сотрудника: \n";
+	cout << "Номер: " << b.numb << endl;
+	cout << "Пособие: " << b.dol << endl;
+	cout << "Должность: ";
+	switch (b.prof)
+	{
+	case laborer: cout << "laborer" << endl; break;
+	case secretary: cout << "secretary" << endl; break;
+	case manager: cout << "manager" << endl; break;
+	case accountant: cout << "accountant" << endl; break;
+	case executive: cout << "executive" << endl; break;
+	case researcher: cout << "researcher" << endl; break;
+	}
+	cout << "Дата приема на работу: " << b.dat.day << '/' << b.dat.month << '/' << b.dat.year << endl;
+
+	cout << "Введите номер третьего сотрудника: ";
+	cin >> c.numb;
+	cout << "Введите размер пособия третьего сотрудника: ";
+	cin >> c.dol;
+	cout << "Введите первую букву должности третьего сотрудника: ";
+	cin >> z;
+	cout << "Введите дату принятия на работу третьего сотрудника: ";
+	cin >> c.dat.day >>ch>> c.dat.month >>ch>> c.dat.year;
+	switch (z)
+	{
+	case 'l': c.prof = laborer; break;
+	case 's': c.prof = secretary; break;
+	case 'm': c.prof = manager; break;
+	case 'a': c.prof = accountant; break;
+	case 'e': c.prof = executive; break;
+	case 'r': c.prof = researcher; break;
+	}
+	cout << "База данных третьего сотрудника: \n";
+	cout << "Номер: " << c.numb << endl;
+	cout << "Пособие: " << c.dol << endl;
+	cout << "Должность: ";
+	switch (c.prof)
+	{
+	case laborer: cout << "laborer" << endl; break;
+	case secretary: cout << "secretary" << endl; break;
+	case manager: cout << "manager" << endl; break;
+	case accountant: cout << "accountant" << endl; break;
+	case executive: cout << "executive" << endl; break;
+	case researcher: cout << "researcher" << endl; break;
+	}
+	cout << "Дата приема на работу: " << c.dat.day << '/' << c.dat.month << '/' << c.dat.year << endl;
+	return 0;
+}
