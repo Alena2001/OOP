@@ -1,0 +1,30 @@
+#include <iostream>
+using namespace std;
+enum etype { laborer, secretary, manager, accountant, executive, researcher };
+int main()
+{
+	setlocale(LC_ALL, "Russian");
+	etype x;
+	char y;
+	cout<<"введите первую букву"<<endl;
+	cin>>y;
+	switch (y)
+	{
+	case 'l': x = laborer; break;
+	case 's': x = secretary; break;
+	case 'm': x = manager; break;
+	case 'a': x = accountant; break;
+	case 'e': x = executive; break;
+	case 'r': x = researcher; break;
+	}
+	switch (x)
+	{
+	case 0: cout << "laborer" << endl; break;
+	case 1: cout << "secretary" << endl; break;
+	case 2: cout << "manager" << endl; break;
+	case 3: cout << "accountant" << endl; break;
+	case 4: cout << "executive" << endl; break;
+	case 5: cout << "researcher" << endl; break;
+	}
+	return 0;
+}
