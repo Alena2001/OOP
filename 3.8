@@ -1,0 +1,16 @@
+#include <iostream>
+using namespace std;
+struct fraction {
+	int ch;
+	int zn;
+};
+int main()
+{
+	setlocale(LC_ALL, "Russian");
+	fraction a, b;
+	char s, oper, x;
+	cout << "Введите арифметическое действие: ";
+	cin >> a.ch >> s >> a.zn >> oper >> b.ch >> s >> b.zn;
+	cout << a.ch * b.zn + a.zn * b.ch << "/" << a.zn * b.zn << endl;
+	return 0;
+}
