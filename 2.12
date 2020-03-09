@@ -6,7 +6,7 @@ int main()
 	int a, b, c, d;
 	char oper, oper1, oper2, ch;
 	do {
-		cout << "Введите рифметическое действие: ";
+		cout << "Введите арифметическое действие: ";
 		cin >> a >> oper1 >> b >> oper >> c >> oper2 >> d;
 		switch (oper)
 		{
