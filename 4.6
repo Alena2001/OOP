@@ -1,0 +1,34 @@
+#include <iostream>
+using namespace std;
+struct Time
+{
+	int hours;
+	int minutes;
+	int seconds;
+};
+long int time_to_secs(Time t) {
+	long x = t.hours * 3600 + t.minutes * 60 + t.seconds;
+	return x;
+}
+Time secs_to_time(long x) {
+	Time sum;
+	sum.hours = x / 3600;
+	sum.minutes = x % 3600 / 60;
+	sum.seconds = x % 3600 % 60;
+	return sum;
+}
+int main()
+{
+	setlocale(LC_ALL, "Russian");
+	Time t, t1, sum;
+	char c;
+	long x;
+	cout << "Введие первое время: ";
+	cin >> t.hours >> c >> t.minutes >> c >> t.seconds;
+	cout << "Введие второе время: ";
+	cin >> t1.hours >> c >> t1.minutes >> c >> t1.seconds;
+	x = time_to_secs(t) + time_to_secs(t1);
+	sum=secs_to_time(x);
+	cout << sum.hours << ":" << sum.minutes << ":" << sum.seconds << endl;
+	return 0;
+}
