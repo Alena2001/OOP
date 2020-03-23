@@ -1,0 +1,19 @@
+#include <iostream>
+using namespace std;
+void swap(int& num1, int& num2)
+{
+	int t = num1;
+	num1 = num2;
+	num2 = t;
+}
+int main() {
+	setlocale(LC_ALL, "Russian");
+	int num1, num2;
+	cout << "Введите первое число: ";
+	cin >> num1;
+	cout << "Введите второе число: ";
+	cin >> num2;
+	swap(num1, num2);
+	cout << num1 << endl << num2;
+	return 0;
+}
