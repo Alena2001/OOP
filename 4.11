@@ -1,0 +1,50 @@
+#include <iostream>
+
+using namespace std;
+struct sterling {
+	int pounds;
+	int shilling;
+	int pence;
+};
+sterling abc(int pounds1, int shilling1, int pence1) {
+	sterling f;
+	f.pounds = pounds1;
+	f.shilling = shilling1;
+	f.pence = pence1;
+	cout << "Фунты: " << pounds1 << endl << "Шиллинги: " << shilling1 << endl << "Пенни: " << pence1 << endl;
+	return f;
+}
+sterling sum1(sterling f, sterling f1) {
+	sterling sum;
+	sum.pence = f.pence + f1.pence;
+	if (sum.pence >= 12)
+	{
+		sum.pence -= 12;
+		f.shilling++;
+	}
+	sum.shilling = f.shilling + f1.shilling;
+	if (sum.shilling >= 19)
+	{
+		sum.shilling -= 19;
+		f.pounds++;
+	}
+	sum.pounds = f.pounds + f1.pounds;
+	cout << "Сумма равна: " << sum.pounds << '.' << sum.shilling << '.' << sum.pence << endl;
+	return sum;
+}
+void abc1(sterling f) {
+	cout << "Фунты: " << f.pounds << endl << "Шиллинги: " << f.shilling << endl << "Пенни: " << f.pence << endl;
+}
+int main() {
+	setlocale(LC_ALL, "Russian");
+	sterling f, f1;
+	char ch;
+	cout << "Введите первую денежную сумму: ";
+	cin >> f.pounds >> ch >> f.shilling >> ch >> f.pence;
+	cout << "Введите вторую денежную сумму: ";
+	cin >> f1.pounds >> ch >> f1.shilling >> ch >> f1.pence;
+	abc(f.pounds, f.shilling, f.pence);
+	sum1(f, f1);
+	abc1(f1);
+	return 0;
+}
