@@ -1,0 +1,33 @@
+№1
+#include <iostream>
+using namespace std;
+int fun( ) {
+	static int k = 0;
+	k++;
+	return k;
+}
+int main() {
+	setlocale(LC_ALL, "Russian");
+	for (int i = 0; i < 15; i++) {
+		cout << "Функция вызывалась " << fun() << " раз" << endl;
+	}
+	return 0;
+}
+
+№2
+#include <iostream>
+using namespace std;
+int k = 0;
+int fun(int k ) {
+	int n = k;
+	k++;
+	return k;
+}
+int main() {
+	setlocale(LC_ALL, "Russian");
+	for (int i = 0; i < 15; i++) {
+		cout << "Функция вызывалась " << fun(k) << " раз" << endl;
+		k++;
+	}
+	return 0;
+}
