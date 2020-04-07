@@ -1,0 +1,61 @@
+#include <iostream>
+using namespace std;
+struct fraction {
+	int ch;
+	int zn;
+};
+fraction fadd(fraction a, fraction b)
+{
+	fraction c;
+	c.ch = a.ch * b.zn + a.zn * b.ch;
+	c.zn = a.zn * b.zn;
+	cout << c.ch << "/" << c.zn << endl;
+	return c;
+}
+fraction fsub(fraction a, fraction b)
+{
+	fraction c;
+	c.ch = a.ch * b.zn - a.zn * b.ch;
+	c.zn = a.zn * b.zn;
+	cout << c.ch << "/" << c.zn << endl;
+	return c;
+}
+fraction fmul(fraction a, fraction b)
+{
+	fraction c;
+	c.ch = a.ch * b.ch;
+	c.zn = a.zn * b.zn;
+	cout << c.ch << "/" << c.zn << endl;
+	return c;
+}
+fraction fdiv(fraction a, fraction b)
+{
+	fraction c;
+	c.ch = a.ch * b.zn;
+	c.zn = a.zn * b.ch;
+	cout << c.ch << "/" << c.zn << endl;
+	return c;
+}
+int main()
+{
+	setlocale(LC_ALL, "Russian");
+	fraction a, b, c ;
+	char s, oper, x;
+	cout << "Введите арифметическое действие: ";
+	cin >> a.ch >> s >> a.zn >> oper >> b.ch >> s >> b.zn;
+	switch (oper) {
+	case '+':
+		fadd(a, b);
+		break;
+	case '-':
+		fsub(a, b);
+		break;
+	case '*':
+		fmul(a, b);
+		break;
+	case '/':
+		fdiv(a, b);
+		break;
+	}
+	return 0;
+}
